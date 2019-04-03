@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:jchcarcontrol"
         mc:Ignorable="d"
-        Title="Jc Hacker Car" Height="450" Width="800">
+        Title="Jc Hacker Car" Height="450" Width="800" Initialized="Window_Initialized" Closed="Window_Closed">
 
     <Grid>
+        <Label Content="Log" HorizontalAlignment="Left" Margin="10,1,0,0" VerticalAlignment="Top"/>
+        <Button Content="Scan" HorizontalAlignment="Left" Margin="707,27,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBox x:Name="textLog" HorizontalAlignment="Left" Height="409" TextWrapping="Wrap" VerticalAlignment="Top" Width="702">
+
+        </TextBox>
+        <TextBox x:Name="crackNumber" HorizontalAlignment="Left" Height="23" Margin="707,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="crackButton" Content="Crack" HorizontalAlignment="Left" Margin="707,80,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button x:Name="stopButton" Content="Abort" HorizontalAlignment="Left" Margin="707,105,0,0" VerticalAlignment="Top" Width="75" Click="StopButton_Click"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="707,389,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <Button Content="List" HorizontalAlignment="Left" Margin="707,364,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
     </Grid>
 </Window>
