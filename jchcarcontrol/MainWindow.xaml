@@ -9,14 +9,22 @@
 
     <Grid>
         <Label Content="Log" HorizontalAlignment="Left" Margin="10,1,0,0" VerticalAlignment="Top"/>
-        <Button Content="Scan" HorizontalAlignment="Left" Margin="707,27,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Wifi Scan" HorizontalAlignment="Left" Margin="707,27,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <TextBox x:Name="textLog" HorizontalAlignment="Left" Height="409" TextWrapping="Wrap" VerticalAlignment="Top" Width="702">
 
         </TextBox>
-        <TextBox x:Name="crackNumber" HorizontalAlignment="Left" Height="23" Margin="707,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="crackButton" Content="Crack" HorizontalAlignment="Left" Margin="707,80,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <Button x:Name="stopButton" Content="Abort" HorizontalAlignment="Left" Margin="707,105,0,0" VerticalAlignment="Top" Width="75" Click="StopButton_Click"/>
+        <TextBox x:Name="crackNumber" HorizontalAlignment="Left" Height="23" Margin="707,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="crackButton" Content="Crack" HorizontalAlignment="Left" Margin="707,106,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button x:Name="stopButton" Content="Abort" HorizontalAlignment="Left" Margin="707,339,0,0" VerticalAlignment="Top" Width="75" Click="StopButton_Click"/>
         <Button Content="Clear" HorizontalAlignment="Left" Margin="707,389,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
         <Button Content="List" HorizontalAlignment="Left" Margin="707,364,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
+        <TextBox x:Name="passbox" x:FieldModifier="public" HorizontalAlignment="Left" Height="23" Margin="707,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" />
+        <Button x:Name="setPassword" Content="Set Pass" HorizontalAlignment="Left" Margin="707,185,0,0" VerticalAlignment="Top" Width="75" Click="SetPassword_Click"/>
+        <Button x:Name="listDevices" Content="Local Scan" HorizontalAlignment="Left" Margin="707,235,0,0" VerticalAlignment="Top" Width="75" Click="ListDevices_Click"/>
+        <Button x:Name="connect" Content="Connect" HorizontalAlignment="Left" Margin="707,210,0,0" VerticalAlignment="Top" Width="75" Click="Connect_Click"/>
+        <Button x:Name="openVAS" Content="OpenVAS" HorizontalAlignment="Left" Margin="707,260,0,0" VerticalAlignment="Top" Width="75" Click="OpenVAS_Click" RenderTransformOrigin="0.482,2.365"/>
+        <Label Content="Wifi #" HorizontalAlignment="Left" Margin="707,52,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="707,131,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="video" Content="Video" HorizontalAlignment="Left" Margin="707,285,0,0" VerticalAlignment="Top" Width="75" Click="Video_Click" RenderTransformOrigin="0.482,2.365"/>
     </Grid>
 </Window>

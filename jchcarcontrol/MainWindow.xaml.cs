@@ -1,6 +1,7 @@
 ﻿using SharpDX.XInput;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -66,7 +67,7 @@ namespace jchcarcontrol
             }
             else
             {
-                Log("controller??");
+                Log("CONTROLLER NOT CONNECTED");
             }
             while (c.IsConnected)
             {
@@ -135,6 +136,38 @@ namespace jchcarcontrol
         {
             net.Send("list");
             Log("sent list request");
+        }
+
+        private void SetPassword_Click(object sender, RoutedEventArgs e)
+        {
+            net.Send("password "+ crackNumber.Text+" "+passbox.Text);
+            Log("sent password for wifi "+ crackNumber.Text);
+        }
+
+        private void Connect_Click(object sender, RoutedEventArgs e)
+        {
+            net.Send("connect "+ crackNumber.Text);
+            Log("trying to connect to wifi # " + crackNumber.Text);
+        }
+
+        private void ListDevices_Click(object sender, RoutedEventArgs e)
+        {
+            net.Send("devices");
+            Log("Scanning for devices");
+        }
+
+        private void Video_Click(object sender, RoutedEventArgs e)
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = "C:\\Program Files\\internet explorer\\iexplore.exe";
+            p.StartInfo.Arguments = "-k 192.168.12.3";
+            p.StartInfo.UseShellExecute = false;
+            p.Start();
+        }
+
+        private void OpenVAS_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("http://10.9.0.3");
         }
     }
 }
